@@ -622,6 +622,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charizard
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
+      propertyPath: m_TagString
+      value: CharizardGo
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
+      propertyPath: m_TagString
+      value: charizardCollision
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -690,6 +698,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 409521038}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &409521040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 76a69e381a5af404d9cd6f46dd7f9576,
+    type: 3}
+  m_PrefabInstance: {fileID: 409521038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &409521041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409521040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a659e3b35ac4543928009665fb3124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &413924208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,7 +1400,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 613143954}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1718766539}
+        m_MethodName: Growl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &613143954
@@ -1816,7 +1853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 815393578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a759692f1cb4502babaf7ec6ed1364, type: 3}
+  m_Script: {fileID: 11500000, guid: ac6255bd3d7a747b088e76d6138007b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &815393580
@@ -2098,8 +2135,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.8598027, y: 5.4487467, z: 4.010251}
+  m_Center: {x: -0.21661305, y: 2.2243733, z: -0.52884483}
 --- !u!54 &906422535
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2116,6 +2153,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &906422536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906422533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f75abb77771c453e8e92ab27cfabc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &908481303
 GameObject:
   m_ObjectHideFlags: 0
