@@ -1867,8 +1867,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.75333834, y: 1.2044783, z: 0.85294056}
-  m_Center: {x: 0.0010017157, y: 0.59132004, z: 0.046325445}
+  m_Size: {x: 0.75333834, y: 1.0646052, z: 0.85294056}
+  m_Center: {x: 0.0010017157, y: 0.66125655, z: 0.046325445}
 --- !u!54 &815393581
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1956,6 +1956,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9fea2785d9cb84fd29a3f3cebd5a7c85, type: 2}
+    - target: {fileID: 400054, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 400054, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
 --- !u!4 &826311914 stripped
@@ -2135,8 +2143,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8598027, y: 5.4487467, z: 4.010251}
-  m_Center: {x: -0.21661305, y: 2.2243733, z: -0.52884483}
+  m_Size: {x: 4.8598027, y: 4.4713764, z: 4.1597276}
+  m_Center: {x: -0.21661305, y: 2.7130585, z: -0.45410663}
 --- !u!54 &906422535
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3517,6 +3525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1894af14a99414c06b5878c5a31b652d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pikachuMove: 0
 --- !u!1 &1785152571
 GameObject:
   m_ObjectHideFlags: 0

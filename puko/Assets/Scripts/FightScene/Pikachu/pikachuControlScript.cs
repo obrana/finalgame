@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class pikachuControlScript : MonoBehaviour
 {
-    bool pikachuMove;
+    public static pikachuControlScript Instance { set; get;}
+    public bool pikachuMove;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       Instance = this;  
     }
 
     // Update is called once per frame
@@ -20,7 +21,10 @@ public class pikachuControlScript : MonoBehaviour
             transform.LookAt(GameObject.FindGameObjectWithTag("CharizardGo").transform.position);
             transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
         }
-
+        if (pikachuMove)
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime *3f);
+        }
     }
     public void Growl()
     {
