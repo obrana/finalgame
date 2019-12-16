@@ -13,11 +13,9 @@ public class pikachuCollisionScript : MonoBehaviour
             GameObject.Find("Pikachu").transform.position = GameObject.Find("MyPokemon").transform.position;
             GameObject.Find("Pikachu").GetComponent<Animator>().Play("pikashuIDLE");
             GameObject.FindGameObjectWithTag("CharizardGo").GetComponent<Animator>().Play("collisionWithPikashu");
+            GameControllerScript.Instance.ConfirmButton.SetActive(true);
         }
     }
 
-    public static implicit operator pikachuCollisionScript(pikachuControlScript v)
-    {
-        throw new NotImplementedException();
-    }
+
 }

@@ -1,18 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class charizardCollisionScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision Coll)
     {
-        
+        if (Coll.gameObject.tag == "pikachuCollision")
+        {
+            charizardControlScript.Instance.goCharizard = false;
+            GameObject.FindGameObjectWithTag("CharizardGO").transform.position = GameObject.Find("EnemyPokemon").transform.position;
+            GameObject.FindGameObjectWithTag("CharizardGO").GetComponent<Animator>().Play("CharizardIDLE");
+            GameObject.FindGameObjectWithTag("Pikashu").GetComponent<Animator>().Play("attackFromCharizard");
+            GameControllerScript.Instance.ConfirmButton.SetActive(true);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
