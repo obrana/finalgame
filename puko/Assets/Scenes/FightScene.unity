@@ -3088,7 +3088,7 @@ MonoBehaviour:
   m_PlaneDetection: 0
   m_LightEstimation: 1
   m_PointCloud: 0
-  m_BackgroundRendering: 0
+  m_BackgroundRendering: 1
   m_Scale: 1
   pointOfInterest: {x: 0, y: 0, z: 0}
 --- !u!114 &1318362599
@@ -3795,13 +3795,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: shadowPlanePrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1983520619281468, guid: 696855730620a483c9ae4c242e312b28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4023412880410692, guid: 696855730620a483c9ae4c242e312b28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023412880410692, guid: 696855730620a483c9ae4c242e312b28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13
+      value: -0.84
       objectReference: {fileID: 0}
     - target: {fileID: 4023412880410692, guid: 696855730620a483c9ae4c242e312b28, type: 3}
       propertyPath: m_LocalPosition.z

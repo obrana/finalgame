@@ -8,6 +8,8 @@ TagManager:
   - charizardCollision
   - PikachuGO
   - pikachuCollision
+  - randomCharizard
+  - randomBigCharizard
   layers:
   - Default
   - TransparentFX
