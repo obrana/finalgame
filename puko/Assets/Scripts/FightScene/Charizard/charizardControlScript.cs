@@ -7,6 +7,7 @@ public class charizardControlScript : MonoBehaviour
     public static charizardControlScript Instance { set; get; }
     bool flyCharizard;
     public bool goCharizard;
+    public ParticleSystem FlameThrowerGO;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,5 +44,19 @@ public class charizardControlScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         goCharizard = true;
         gameObject.GetComponent<Animator>().Play("flyAttack");
+    }
+    public void FlameThrower()
+    {
+        StartCoroutine(waitForFlameThrower());
+    }
+    IEnumerator waitForFlameThrower()
+    {
+        gameObject.GetComponent<Animator>().Play("flamethrower");
+        yield return new WaitForSeconds(1f);
+        FlameThrowerGO.Play();
+        GameObject.Find("Pikachu").GetComponent<Animator>().Play("attackFromCharizard");
+        yield return new WaitForSeconds(1.2f);
+        FlameThrowerGO.Stop();
+        GameControllerScript.Instance.ConfirmButton.SetActive(true);
     }
 }

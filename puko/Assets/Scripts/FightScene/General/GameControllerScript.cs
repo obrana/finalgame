@@ -10,6 +10,8 @@ public class GameControllerScript : MonoBehaviour
     public Text InfoText;
     public GameObject SelectBar;
     public GameObject ConfirmButton;
+    public GameObject FightButtons;
+    public GameObject StartButtons;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,14 @@ public class GameControllerScript : MonoBehaviour
     {
         switch (GameStatus)
         {
+            case "selectOption":
+                InfoText.text = "";
+                ConfirmButton.SetActive(false);
+                SelectBar.gameObject.SetActive(true);
+                StartButtons.gameObject.SetActive(true);
+                FightButtons.gameObject.SetActive(false);
+                break;
+
             case "caughtCharizard":
                 InfoText.text = "CHARIZARD was Caught";
                 break;
@@ -31,7 +41,8 @@ public class GameControllerScript : MonoBehaviour
                 break;
 
             case "enemyattacks":
-                int RandomAttack = Random.Range(0, 1);
+                ConfirmButton.SetActive(false);
+                int RandomAttack = Random.Range(1, 2);
 
                 if (RandomAttack == 0)
                 {
@@ -42,7 +53,9 @@ public class GameControllerScript : MonoBehaviour
                 else if (RandomAttack == 1)
                 {
                     InfoText.text = "CHARIZARD used FLAMETHROWER";
+                    charizardControlScript.Instance.FlameThrower();
                 }
+                GameStatus = "selectOption";
                 break;
 
             case "pikachuUsedThundershock":
