@@ -29,7 +29,7 @@ public class LocationControllerScript : MonoBehaviour
         float distance = Vector3.Distance(randomPokemonGO.transform.position, Trainer.position);
         print(distance);
 
-        if(distance <= 5f && randomPokemonGO.tag =="randomCharizard")
+        if(distance <=5f && randomPokemonGO.tag =="randomCharizard")
         {
             SceneManager.LoadScene("FightScene");
         }
