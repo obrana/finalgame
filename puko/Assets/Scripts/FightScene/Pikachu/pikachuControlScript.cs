@@ -30,5 +30,7 @@ public class pikachuControlScript : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().Play("Attack");
         pikachuMove = true;
+        GameControllerScript.GameStatus = "pikachuUsedGrowl";
+        GameControllerScript.Instance.gameStatusInfoBar();
     }
 }
