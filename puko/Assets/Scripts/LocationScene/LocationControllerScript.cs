@@ -20,7 +20,7 @@ public class LocationControllerScript : MonoBehaviour
     void MyRandomPokemon()
     {
         randomPokemon = Random.Range(0, Pokemons.Length);
-        randomX = Random.Range(-20, 20);
+        randomX = Random.Range(-10, 10);
         randomPokemonGO = Instantiate(Pokemons[randomPokemon], new Vector3(randomX, Map.position.y, Map.position.z), Quaternion.identity) as GameObject;
     }
     // Update is called once per frame
