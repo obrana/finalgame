@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class GameControllerScript : MonoBehaviour
     public GameObject ConfirmButton;
     public GameObject FightButtons;
     public GameObject StartButtons;
+    public GameObject PokemonEnemyUI;
+    public GameObject TrainerUI;
+    public GameObject PokemonUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +27,24 @@ public class GameControllerScript : MonoBehaviour
    public void gameStatusInfoBar()
     {
         switch (GameStatus)
+
         {
+            case "loadLocationScene":
+                SceneManager.LoadScene("Location-BasedGame");
+                break;
+
+            case "enemyIsDead":
+                InfoText.text = "CHARIZARD is DEAD";
+                GameStatus = "loadLocationScene";
+                ConfirmButton.SetActive(true);
+                break;
+
+            case "pikachuIsDead":
+                InfoText.text = "Your POKEMON is DEAD!!";
+                GameStatus = "loadLocationScene";
+                ConfirmButton.SetActive(true);
+                break;
+
             case "selectOption":
                 InfoText.text = "";
                 ConfirmButton.SetActive(false);
@@ -72,14 +93,21 @@ public class GameControllerScript : MonoBehaviour
 
             case "pokemonIsOut":
                 InfoText.text = "GO! PIKACHU!";
+                TrainerUI.gameObject.SetActive(false);
+                PokemonUI.gameObject.SetActive(true);
+                GameStatus = "selectOption";
                 break;
 
             case "enemyAppeared":
                 InfoText.text = "Choose your Pokemon";
+                GameStatus = null;
                 break;
 
             case "fightHasStarted":
                 InfoText.text = "wild CHARIZARD appreared";
+                PokemonEnemyUI.gameObject.SetActive(true);
+                ConfirmButton.SetActive(true);
+                GameStatus = "enemyAppeared";
                 break;
 
             default:
