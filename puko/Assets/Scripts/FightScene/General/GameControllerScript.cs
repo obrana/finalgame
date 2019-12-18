@@ -37,6 +37,7 @@ public class GameControllerScript : MonoBehaviour
                 InfoText.text = "CHARIZARD is DEAD";
                 GameStatus = "loadLocationScene";
                 ConfirmButton.SetActive(true);
+                soundsControl.Instance.fightsound.Stop();
                 break;
 
             case "pikachuIsDead":
@@ -93,6 +94,7 @@ public class GameControllerScript : MonoBehaviour
 
             case "pokemonIsOut":
                 InfoText.text = "GO! PIKACHU!";
+                soundsControl.Instance.pikachuStartSound.Play();
                 TrainerUI.gameObject.SetActive(false);
                 PokemonUI.gameObject.SetActive(true);
                 GameStatus = "selectOption";

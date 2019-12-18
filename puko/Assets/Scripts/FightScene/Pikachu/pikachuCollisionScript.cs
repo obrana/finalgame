@@ -14,6 +14,7 @@ public class pikachuCollisionScript : MonoBehaviour
             pikachuControlScript.Instance.pikachuMove = false;
             GameObject.Find("Pikachu").transform.position = GameObject.Find("MyPokemon").transform.position;
             GameObject.Find("Pikachu").GetComponent<Animator>().Play("pikashuIDLE");
+            soundsControl.Instance.tackleSound.Play();
             GameObject.FindGameObjectWithTag("CharizardGo").GetComponent<Animator>().Play("collisionWithPikashu");
             charizardControlScript.Instance.quickAttackFromPikachu(0f, collisionWithPikachu);
             GameControllerScript.Instance.ConfirmButton.SetActive(true);
