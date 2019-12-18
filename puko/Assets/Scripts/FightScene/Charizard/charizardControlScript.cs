@@ -43,7 +43,7 @@ public class charizardControlScript : MonoBehaviour
     }
     public void charizardAppeared()
     {
-
+        soundsControl.Instance.charizardStartSound.Play();
     }
     public void Fly()
     {
@@ -70,12 +70,14 @@ public class charizardControlScript : MonoBehaviour
         gameObject.GetComponent<Animator>().Play("flamethrower");
         yield return new WaitForSeconds(1f);
         FlameThrowerGO.Play();
+        soundsControl.Instance.flamethrowerSound.Play();
         yield return new WaitForSeconds(0.5f);
         pikachuControlScript.Instance.flamethrowerFromCharizard(flameThrowerValue);
         GameObject.Find("Pikachu").GetComponent<Animator>().Play("attackFromCharizard");
         yield return new WaitForSeconds(1.2f);
         FlameThrowerGO.Stop();
         GameControllerScript.Instance.ConfirmButton.SetActive(true);
+
     }
     public void quickAttackFromPikachu(float quickAttackValue, bool collisionWithPikachu)
     {

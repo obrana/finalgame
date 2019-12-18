@@ -16,6 +16,7 @@ public class startGame : MonoBehaviour
     IEnumerator StartFight()
     {
         BlackScreen.gameObject.SetActive(true);
+        soundsControl.Instance.fightsound.Play();
 
         yield return new WaitForSeconds(0.1f);
         for (int i = 0; i <= 20; i++)
