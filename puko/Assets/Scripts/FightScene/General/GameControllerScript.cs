@@ -30,12 +30,12 @@ public class GameControllerScript : MonoBehaviour
 
         {
             case "loadLocationScene":
-                SceneManager.LoadScene("Location-BasedGame");
-                break;
+                SceneManager.LoadScene("GameOver");
+                break; 
 
             case "enemyIsDead":
                 InfoText.text = "CHARIZARD is DEAD";
-                GameStatus = "loadLocationScene";
+                SceneManager.LoadScene("GameOver");
                 ConfirmButton.SetActive(true);
                 soundsControl.Instance.fightSound.Stop();
                 break;
