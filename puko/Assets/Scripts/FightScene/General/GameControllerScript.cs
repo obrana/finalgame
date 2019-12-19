@@ -37,7 +37,7 @@ public class GameControllerScript : MonoBehaviour
                 InfoText.text = "CHARIZARD is DEAD";
                 GameStatus = "loadLocationScene";
                 ConfirmButton.SetActive(true);
-                soundsControl.Instance.fightsound.Stop();
+                soundsControl.Instance.fightSound.Stop();
                 break;
 
             case "pikachuIsDead":

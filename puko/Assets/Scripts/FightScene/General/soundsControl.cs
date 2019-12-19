@@ -6,7 +6,7 @@ public class soundsControl : MonoBehaviour
 {
 
     public static soundsControl Instance { set; get; }
-    public AudioSource fightsound;
+    public AudioSource fightSound;
     public AudioSource clickSound;
     public AudioSource pikachuStartSound;
     public AudioSource charizardStartSound;

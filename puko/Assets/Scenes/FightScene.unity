@@ -5435,7 +5435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa544d99a31f94ba4a275ebb3f94c449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fightsound: {fileID: 2058795358}
+  fightSound: {fileID: 2058795358}
   clickSound: {fileID: 2058795359}
   pikachuStartSound: {fileID: 2058795357}
   charizardStartSound: {fileID: 2058795356}
